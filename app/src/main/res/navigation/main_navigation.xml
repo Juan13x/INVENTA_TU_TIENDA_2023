@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_products">
+
+    <fragment
+        android:id="@+id/navigation_products"
+        android:name="com.example.inventa_tu_tienda_2023.ui.products.ProductsFragment"
+        android:label="@string/menuMain_products"
+        tools:layout="@layout/fragment_products" />
+
+    <fragment
+        android:id="@+id/navigation_categories"
+        android:name="com.example.inventa_tu_tienda_2023.ui.categories.CategoriesFragment"
+        android:label="@string/menuMain_categories"
+        tools:layout="@layout/fragment_categories" />
+
+    <fragment
+        android:id="@+id/navigation_stores"
+        android:name="com.example.inventa_tu_tienda_2023.ui.stores.StoresFragment"
+        android:label="@string/menuMain_stores"
+        tools:layout="@layout/fragment_stores" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.inventa_tu_tienda_2023.ui.profile.ProfileFragment"
+        android:label="@string/menuMain_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

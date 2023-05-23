@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_navigation"
+    app:startDestination="@id/noUserMainFragment">
+
+    <fragment
+        android:id="@+id/noUserMainFragment"
+        android:name="com.example.inventa_tu_tienda_2023.ui.profile.no_user.no_user_main.NoUserMainFragment"
+        android:label="fragment_no_user_main"
+        tools:layout="@layout/fragment_no_user_main" >
+        <action
+            android:id="@+id/action_noUserMainFragment_to_profileMainFragment"
+            app:destination="@id/profileMainFragment" />
+        <action
+            android:id="@+id/action_noUserMainFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.inventa_tu_tienda_2023.ui.profile.no_user.sign_up.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_noUserMainFragment"
+            app:destination="@id/noUserMainFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.inventa_tu_tienda_2023.ui.profile.no_user.log_in.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_profileMainFragment"
+            app:destination="@id/profileMainFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_noUserMainFragment"
+            app:destination="@id/noUserMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileMainFragment"
+        android:name="com.example.inventa_tu_tienda_2023.ui.profile.with_user.profile_main.ProfileMainFragment"
+        android:label="fragment_profile_main"
+        tools:layout="@layout/fragment_profile_main" >
+        <action
+            android:id="@+id/action_profileMainFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_personalDataFragment"
+            app:destination="@id/personalDataFragment" />
+        <action
+            android:id="@+id/action_profileMainFragment_to_companyDataFragment"
+            app:destination="@id/companyDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.inventa_tu_tienda_2023.ui.profile.with_user.change_password.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/companyDataFragment"
+        android:name="com.example.inventa_tu_tienda_2023.ui.profile.with_user.company_data.CompanyDataFragment"
+        android:label="fragment_company_data"
+        tools:layout="@layout/fragment_company_data" />
+    <fragment
+        android:id="@+id/personalDataFragment"
+        android:name="com.example.inventa_tu_tienda_2023.ui.profile.with_user.personal_data.PersonalDataFragment"
+        android:label="fragment_personal_data"
+        tools:layout="@layout/fragment_personal_data" />
+</navigation>
