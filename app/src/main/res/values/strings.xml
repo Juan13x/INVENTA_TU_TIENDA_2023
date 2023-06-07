@@ -2,14 +2,28 @@
     <string name="app_name">INVENTA_TU_TIENDA_2023</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="menuMain_products">Products</string>
     <string name="menuMain_categories">Categories</string>
     <string name="menuMain_stores">Stores</string>
     <string name="menuMain_profile">Profile</string>
     <string name="menuProducts_emptyFragment_title">empty_fragment</string>
+    <string name="noUserMain_welcome">Welcome</string>
+    <string name="noUserMain_logIn_text">Log In</string>
+    <string name="noUserMain_signUp_text">Sign Up</string>
+    <string name="signUp_title">Sign Up</string>
+    <string name="signUp_email_hint">Input Email</string>
+    <string name="signUp_password_hint">Input Password</string>
+    <string name="signUp_repeatPassword_hint">Repeat Password</string>
+    <string name="signUp_name_hint">Input User Name</string>
+    <string name="signUp_cellPhoneNumber_hint">Input CellPhone Number 1</string>
+    <string name="signUp_addNumber_button">Add Number</string>
+    <string name="signUp_deleteNumber_button">Delete Number</string>
+    <string name="logIn_title">Log In</string>
+    <string name="logIn_noUserRegistered_text">No User? Sign Up! Click Here.</string>
+    <string name="logIn_password_text">Input Password</string>
+    <string name="logIn_enter_button">Enter</string>
+    <string name="logIn_back_button">back</string>
+    <string name="signUp_back_button">Back</string>
+    <string name="noUserMain_floatingButton_text">The app can be used with or without an user. However, the information saved by each one is independent</string>
 </resources>

@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.inventa_tu_tienda_2023.R
+import com.example.inventa_tu_tienda_2023.databinding.FragmentLogInBinding
 
 class LogInFragment : Fragment() {
 
@@ -15,18 +17,24 @@ class LogInFragment : Fragment() {
     }
 
     private lateinit var viewModel: LogInViewModel
+    private lateinit var binding: FragmentLogInBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_log_in, container, false)
-    }
+    ): View {
+        binding = FragmentLogInBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(this)[LogInViewModel::class.java]
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(LogInViewModel::class.java)
-        // TODO: Use the ViewModel
+        val navController = findNavController()
+
+        with(binding){
+            logInBackButton.setOnClickListener{
+                val action = LogInFragmentDirections.actionLogInFragmentToNoUserMainFragment()
+                navController.navigate(action)
+            }
+        }
+        return binding.root
     }
 
 }

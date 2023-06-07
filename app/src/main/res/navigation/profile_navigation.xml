@@ -11,8 +11,8 @@
         android:label="fragment_no_user_main"
         tools:layout="@layout/fragment_no_user_main" >
         <action
-            android:id="@+id/action_noUserMainFragment_to_profileMainFragment"
-            app:destination="@id/profileMainFragment" />
+            android:id="@+id/action_noUserMainFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
         <action
             android:id="@+id/action_noUserMainFragment_to_logInFragment"
             app:destination="@id/logInFragment" />
@@ -23,11 +23,14 @@
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
-            android:id="@+id/action_signUpFragment_to_noUserMainFragment"
-            app:destination="@id/noUserMainFragment" />
-        <action
             android:id="@+id/action_signUpFragment_to_logInFragment"
             app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_profileMainFragment"
+            app:destination="@id/profileMainFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_noUserMainFragment"
+            app:destination="@id/noUserMainFragment" />
     </fragment>
     <fragment
         android:id="@+id/logInFragment"
@@ -37,6 +40,9 @@
         <action
             android:id="@+id/action_logInFragment_to_profileMainFragment"
             app:destination="@id/profileMainFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
         <action
             android:id="@+id/action_logInFragment_to_noUserMainFragment"
             app:destination="@id/noUserMainFragment" />
@@ -60,15 +66,27 @@
         android:id="@+id/changePasswordFragment"
         android:name="com.example.inventa_tu_tienda_2023.ui.profile.with_user.change_password.ChangePasswordFragment"
         android:label="fragment_change_password"
-        tools:layout="@layout/fragment_change_password" />
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_profileMainFragment"
+            app:destination="@id/profileMainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/companyDataFragment"
         android:name="com.example.inventa_tu_tienda_2023.ui.profile.with_user.company_data.CompanyDataFragment"
         android:label="fragment_company_data"
-        tools:layout="@layout/fragment_company_data" />
+        tools:layout="@layout/fragment_company_data" >
+        <action
+            android:id="@+id/action_companyDataFragment_to_profileMainFragment"
+            app:destination="@id/profileMainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/personalDataFragment"
         android:name="com.example.inventa_tu_tienda_2023.ui.profile.with_user.personal_data.PersonalDataFragment"
         android:label="fragment_personal_data"
-        tools:layout="@layout/fragment_personal_data" />
+        tools:layout="@layout/fragment_personal_data" >
+        <action
+            android:id="@+id/action_personalDataFragment_to_profileMainFragment"
+            app:destination="@id/profileMainFragment" />
+    </fragment>
 </navigation>

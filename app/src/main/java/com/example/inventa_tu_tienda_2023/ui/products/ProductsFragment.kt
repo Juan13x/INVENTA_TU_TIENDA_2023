@@ -4,6 +4,7 @@ import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
@@ -38,14 +39,21 @@ class ProductsFragment : Fragment() {
         val navController = findNavController(binding.appBarProducts.root.findViewById(R.id.nav_host_fragment_content_products))
         navView.setupWithNavController(navController)
 
-        (activity as AppCompatActivity).setSupportActionBar(binding.appBarProducts.toolbar)
+        val toolbar = binding.appBarProducts.toolbar
+
+        (activity as AppCompatActivity).setSupportActionBar(toolbar)
         val drawerLayout: DrawerLayout = binding.drawerLayout
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_products, R.id.navigation_categories, R.id.navigation_stores, R.id.navigation_profile
+                R.id.navigation_emptyFragment, R.id.navigation_test1, R.id.navigation_test2
             ), drawerLayout
         )
         setupActionBarWithNavController(activity as AppCompatActivity, navController, appBarConfiguration)
+
+        toolbar.setNavigationOnClickListener{
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
+
         return binding.root
     }
 

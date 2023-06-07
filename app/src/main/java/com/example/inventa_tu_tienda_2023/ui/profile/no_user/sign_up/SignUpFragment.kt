@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.inventa_tu_tienda_2023.R
+import com.example.inventa_tu_tienda_2023.databinding.FragmentSignUpBinding
 
 class SignUpFragment : Fragment() {
 
@@ -15,18 +17,24 @@ class SignUpFragment : Fragment() {
     }
 
     private lateinit var viewModel: SignUpViewModel
+    private lateinit var binding: FragmentSignUpBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_sign_up, container, false)
-    }
+    ): View {
+        binding = FragmentSignUpBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(this)[SignUpViewModel::class.java]
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SignUpViewModel::class.java)
-        // TODO: Use the ViewModel
+        val navController = findNavController()
+
+        with(binding){
+            signUpBackButton.setOnClickListener{
+                val action = SignUpFragmentDirections.actionSignUpFragmentToNoUserMainFragment()
+                navController.navigate(action)
+            }
+        }
+        return binding.root
     }
 
 }
