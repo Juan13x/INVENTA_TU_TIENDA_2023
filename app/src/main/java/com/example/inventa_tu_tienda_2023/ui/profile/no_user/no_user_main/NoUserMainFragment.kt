@@ -19,7 +19,7 @@ class NoUserMainFragment : Fragment() {
         fun newInstance() = NoUserMainFragment()
     }
 
-    private lateinit var viewModel: NoUserMainViewModel
+    private lateinit var model: NoUserMainViewModel
     private lateinit var binding: FragmentNoUserMainBinding
 
     override fun onCreateView(
@@ -27,9 +27,14 @@ class NoUserMainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentNoUserMainBinding.inflate(inflater, container, false)
-        viewModel = ViewModelProvider(this)[NoUserMainViewModel::class.java]
+        model = ViewModelProvider(this)[NoUserMainViewModel::class.java]
 
         val navController = findNavController()
+
+        if(model.isThereCurrentUser()){
+            val action = NoUserMainFragmentDirections.actionNoUserMainFragmentToProfileMainFragment()
+            navController.navigate(action)
+        }
 
         with(binding){
             noUserMainLogInButton.setOnClickListener {
@@ -53,4 +58,7 @@ class NoUserMainFragment : Fragment() {
         return binding.root
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+    }
 }

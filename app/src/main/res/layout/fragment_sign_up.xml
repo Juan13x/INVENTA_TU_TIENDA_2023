@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/singUp_frameLayout"
+    android:id="@+id/signUp_frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/White"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/singUp_title_textView"
+        android:id="@+id/signUp_title_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="86dp"
@@ -32,131 +32,143 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-        android:id="@+id/singUp_scrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+    <LinearLayout
+        android:id="@+id/signUp_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_title_textView">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUp_email_textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:boxBackgroundColor="@color/colorPrimaryVariant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUp_email_textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/signUp_email_hint"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorOnPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUp_password_textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundColor="@color/colorPrimaryVariant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUp_password_textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/signUp_password_hint"
+                android:inputType="textWebPassword"
+                android:textColor="@color/colorOnPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUp_repeatPassword_textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundColor="@color/colorPrimaryVariant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUp_repeatPassword_textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/signUp_repeatPassword_hint"
+                android:inputType="textWebPassword"
+                android:textColor="@color/colorOnPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUp_userName_textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundColor="@color/colorPrimaryVariant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUp_userName_textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/signUp_name_hint"
+                android:textColor="@color/colorOnPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUp_companyName_textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundColor="@color/colorPrimaryVariant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUp_company_textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/signUp_companyName_hint"
+                android:inputType="textAutoCorrect"
+                android:textColor="@color/colorOnPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUp_cellphoneNumber_textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundColor="@color/colorPrimaryVariant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUp_cellphoneNumber_textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/signUp_cellPhoneNumber_hint"
+                android:inputType="number"
+                android:textColor="@color/colorOnPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/signUp_coordinatorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/singUp_title_textView">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/singUp_linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/singUp_email_textInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:boxBackgroundColor="@color/colorPrimaryVariant">
+    <Button
+        android:id="@+id/signUp_submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/signUp_Button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_linearLayout" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/singUp_email_textInputEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/signUp_email_hint"
-                    android:textColor="@color/colorOnPrimary" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/singUp_password_textInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                app:boxBackgroundColor="@color/colorPrimaryVariant">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/singUp_password_textInputEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/signUp_password_hint"
-                    android:textColor="@color/colorOnPrimary" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/singUp_repeatPassword_textInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                app:boxBackgroundColor="@color/colorPrimaryVariant">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/singUp_repeatPassword_textInputEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/signUp_repeatPassword_hint"
-                    android:textColor="@color/colorOnPrimary" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/singUp_userName_textInputLayout"
-                android:layout_width="409dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:boxBackgroundColor="@color/colorPrimaryVariant">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/singUp_userName_textInputEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/signUp_name_hint"
-                    android:textColor="@color/colorOnPrimary" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <LinearLayout
-                android:id="@+id/signUp_cellphoneNumbers_linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/singUp_cellphoneNumber1_textInputLayout"
-                    android:layout_width="409dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    app:boxBackgroundColor="@color/colorPrimaryVariant">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/singUp_cellphoneNumber1_textInputEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/signUp_cellPhoneNumber_hint"
-                        android:textColor="@color/colorOnPrimary" />
-                </com.google.android.material.textfield.TextInputLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/signUp_configureCellphoneNumbers_linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/signUp_addCellphoneNumber_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_weight="1"
-                    android:text="@string/signUp_addNumber_button" />
-
-                <Button
-                    android:id="@+id/signUp_deleteCellphoneNumber_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_weight="1"
-                    android:text="@string/signUp_deleteNumber_button" />
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+    <TextView
+        android:id="@+id/signUp_redirect_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/signUp_redirect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_submit_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

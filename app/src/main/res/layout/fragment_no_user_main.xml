@@ -49,11 +49,10 @@
         android:layout_height="200dp"
         android:layout_marginTop="32dp"
         android:scaleType="fitXY"
-        android:src="@drawable/inventa_tu_tienda_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/INVENTA_TU_TIENDA_ICON" />
+        app:srcCompat="@drawable/inventa_tu_tienda_icon" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/noUserMain_info_floatingActionButton"

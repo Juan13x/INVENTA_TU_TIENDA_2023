@@ -8,22 +8,44 @@
     <string name="menuMain_stores">Stores</string>
     <string name="menuMain_profile">Profile</string>
     <string name="menuProducts_emptyFragment_title">empty_fragment</string>
+
     <string name="noUserMain_welcome">Welcome</string>
     <string name="noUserMain_logIn_text">Log In</string>
     <string name="noUserMain_signUp_text">Sign Up</string>
+
     <string name="signUp_title">Sign Up</string>
     <string name="signUp_email_hint">Input Email</string>
     <string name="signUp_password_hint">Input Password</string>
     <string name="signUp_repeatPassword_hint">Repeat Password</string>
     <string name="signUp_name_hint">Input User Name</string>
-    <string name="signUp_cellPhoneNumber_hint">Input CellPhone Number 1</string>
+    <string name="signUp_cellPhoneNumber_hint">Input Phone Number</string>
     <string name="signUp_addNumber_button">Add Number</string>
     <string name="signUp_deleteNumber_button">Delete Number</string>
+    <string name="signUp_companyName_hint">Company Name</string>
+    <string name="signUp_Button_text">Submit</string>
+    <string name="signUp_redirect">Already Registered? Log In Here!</string>
+    <string name="signUp_emailEmpty_error">Input Email</string>
+    <string name="signUp_companyNameEmpty_error">Input Company Name</string>
+    <string name="signUp_passwordEmpty_error">Input Password</string>
+    <string name="signUp_repPasswordEmpty_error">Input repeat Password</string>
+    <string name="signUp_differentPasswords_error">Passwords are different</string>
+    <string name="signUp_wrongEmailFormat_error">Wrong Email Format</string>
+    <string name="signUp_back_button">Back</string>
+    <string name="signUp_passwordShort_error">Password too short</string>
+
     <string name="logIn_title">Log In</string>
     <string name="logIn_noUserRegistered_text">No User? Sign Up! Click Here.</string>
     <string name="logIn_password_text">Input Password</string>
     <string name="logIn_enter_button">Enter</string>
     <string name="logIn_back_button">back</string>
-    <string name="signUp_back_button">Back</string>
+    <string name="login_emailEmpty_error">Input Email</string>
+    <string name="login_passwordEmpty_error">Input Password</string>
+    <string name="login_passwordShort_error">Password too short</string>
+    <string name="login_wrongEmailFormat_error">Wrong Email Format</string>
+
+
     <string name="noUserMain_floatingButton_text">The app can be used with or without an user. However, the information saved by each one is independent</string>
+    <string name="app_nameNiceFormat_text">INVENTA TU TIENDA</string>
+    <string name="profileMain_welcome_text">Welcome %1$s !</string>
+    <string name="profileMain_logout_button">LogOut</string>
 </resources>
